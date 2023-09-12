@@ -10,16 +10,31 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //két szám bekérése és összeadása
+            //--két szám bekérése és összeadása
             int szamA, szamB; //deklarálás
 
-            Console.WriteLine("Adj meg egy számot: ");
-            szamA =int.Parse(Console.ReadLine());
-            Console.WriteLine("Adj meg egy másik számot: ");
-            szamB = int.Parse(Console.ReadLine());
+            //Console.Write("Adj meg egy számot: ");
+            //--bekérek egy számot
+            //szamA =int.Parse(Console.ReadLine());
+            szamA = szamotKer("Adj meg egy számot: ");
+
+            //Console.Write("Adj meg egy másik számot: ");
+            //--bekérek még egy számot
+            //szamB = int.Parse(Console.ReadLine());
+            szamB = szamotKer("Adj meg egy másik számot: ");
+
 
             Console.WriteLine("A két szám összege: " +(szamA + szamB).ToString());
             Console.ReadLine();
+
+        }
+
+        private static int szamotKer(string szoveg)
+        {
+            int bekertSzam;
+            Console.Write(szoveg);
+            bekertSzam = int.Parse(Console.ReadLine());
+            return bekertSzam;
         }
     }
 }
