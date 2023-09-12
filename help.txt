@@ -1,0 +1,28 @@
+eljárás orientált
+
+oop:
+- elzártság: public, private, protect
+- öröklődés
+- polimorfizmus
+
+get: kérik az értékét és vissza adja
+set: kapja az értéket, publikus változó
+
+generate constructor -- konstruktor generálása
+
+exception -- kivétel kezelése -- nem várt hiba
+
+fájl olvasása: "file.ReadLine();" -- soronként olvas
+
+List: dinamikus lista -- tetszés szerinnt bővíthető, törölhető, rendezhető. objektumot tárol
+Array: rögzített, adott mennyiségű.
+Dictionary: kettő között van, a leggyorsabb elérhetőséget biztosít.
+
+metódus túlterhelés -- overloading
+
+LINQ -- SQL-hez hasonló utasítások segítségével lehetett az adatot lekérdezni ha rendezett listáról van szó
+lambda kifejezés (ebben megadjuk a porrásokat) => {utasítások}
+
+
+
+uint 4millióig jó szám...
