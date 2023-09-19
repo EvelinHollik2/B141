@@ -2,13 +2,15 @@ eljárás orientált
 
 oop:
 - elzártság: public, private, protect
-- öröklődés
-- polimorfizmus
+- öröklődés: példányosítás segítségével
+- polimorfizmus : az örökölt dolgokat tudjuk felül írni
 
 get: kérik az értékét és vissza adja
 set: kapja az értéket, publikus változó
+this: az osztályon belül valamilyen tulajdonságra vonatkozik
 
 generate constructor -- konstruktor generálása
+konstruktor -- osztály legfontosabb része. példányosít. 
 
 exception -- kivétel kezelése -- nem várt hiba
 
@@ -24,5 +26,8 @@ LINQ -- SQL-hez hasonló utasítások segítségével lehetett az adatot lekérd
 lambda kifejezés (ebben megadjuk a porrásokat) => {utasítások}
 
 
+példányosítás : Emlosok emlosok = new Emlosok();
+
+származtatás: Macska : Emlosok
 
 uint 4millióig jó szám...
