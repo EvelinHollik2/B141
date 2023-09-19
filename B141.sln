@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "schumacher", "schumacher\sc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Berek_2020", "Berek_2020\Berek_2020.csproj", "{23B8D76B-D89A-46CD-847D-13E8D485C79F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hidegburkolo", "hidegburkolo\hidegburkolo.csproj", "{CEFD1BC2-804C-41EF-8DE9-3180AEC4122C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{23B8D76B-D89A-46CD-847D-13E8D485C79F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23B8D76B-D89A-46CD-847D-13E8D485C79F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23B8D76B-D89A-46CD-847D-13E8D485C79F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEFD1BC2-804C-41EF-8DE9-3180AEC4122C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEFD1BC2-804C-41EF-8DE9-3180AEC4122C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEFD1BC2-804C-41EF-8DE9-3180AEC4122C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEFD1BC2-804C-41EF-8DE9-3180AEC4122C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
