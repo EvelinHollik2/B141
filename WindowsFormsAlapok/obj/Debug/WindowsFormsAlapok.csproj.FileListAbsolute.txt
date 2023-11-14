@@ -1,0 +1,11 @@
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\bin\Debug\orszagok.csv
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\bin\Debug\WindowsFormsAlapok.exe.config
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\bin\Debug\WindowsFormsAlapok.exe
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\bin\Debug\WindowsFormsAlapok.pdb
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.csproj.AssemblyReference.cache
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.Form1.resources
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.Properties.Resources.resources
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.csproj.GenerateResource.cache
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.csproj.CoreCompileInputs.cache
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.exe
+C:\Users\hollik.evelin\Desktop\B141\WindowsFormsAlapok\obj\Debug\WindowsFormsAlapok.pdb

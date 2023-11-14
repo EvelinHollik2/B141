@@ -32,6 +32,7 @@
             this.listBox_Orszagoklista = new System.Windows.Forms.ListBox();
             this.button_TeruletekAtlaga = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_Megszamolas = new System.Windows.Forms.Button();
             this.radioButton_LegfeljebbSzazEzer = new System.Windows.Forms.RadioButton();
             this.radioButton_szazezerFelett = new System.Windows.Forms.RadioButton();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -39,13 +40,12 @@
             this.textBox_EredmenyFajlNeve = new System.Windows.Forms.TextBox();
             this.button_Kiiras = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_MinMax = new System.Windows.Forms.ComboBox();
             this.button_Maximum_Minimum_Valasztas = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBox_talalatok_jelolese = new System.Windows.Forms.CheckBox();
             this.textBox_KeresettOrszag = new System.Windows.Forms.TextBox();
             this.button_Kereses = new System.Windows.Forms.Button();
-            this.button_Megszamolas = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button_Betoltes = new System.Windows.Forms.Button();
             this.textBox_Forrasfajl = new System.Windows.Forms.TextBox();
@@ -73,6 +73,7 @@
             this.button_TeruletekAtlaga.TabIndex = 2;
             this.button_TeruletekAtlaga.Text = "Területek átlaga";
             this.button_TeruletekAtlaga.UseVisualStyleBackColor = true;
+            this.button_TeruletekAtlaga.Click += new System.EventHandler(this.button_TeruletekAtlaga_Click);
             // 
             // groupBox1
             // 
@@ -86,6 +87,17 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Mit számoljunk?";
+            // 
+            // button_Megszamolas
+            // 
+            this.button_Megszamolas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.button_Megszamolas.Location = new System.Drawing.Point(20, 104);
+            this.button_Megszamolas.Name = "button_Megszamolas";
+            this.button_Megszamolas.Size = new System.Drawing.Size(335, 42);
+            this.button_Megszamolas.TabIndex = 6;
+            this.button_Megszamolas.Text = "Megszámolás";
+            this.button_Megszamolas.UseVisualStyleBackColor = false;
+            this.button_Megszamolas.Click += new System.EventHandler(this.button_Megszamolas_Click);
             // 
             // radioButton_LegfeljebbSzazEzer
             // 
@@ -142,11 +154,12 @@
             this.button_Kiiras.TabIndex = 11;
             this.button_Kiiras.Text = "Kiírás";
             this.button_Kiiras.UseVisualStyleBackColor = false;
+            this.button_Kiiras.Click += new System.EventHandler(this.button_Kiiras_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.groupBox3.Controls.Add(this.comboBox1);
+            this.groupBox3.Controls.Add(this.comboBox_MinMax);
             this.groupBox3.Controls.Add(this.button_Maximum_Minimum_Valasztas);
             this.groupBox3.Location = new System.Drawing.Point(337, 320);
             this.groupBox3.Name = "groupBox3";
@@ -155,16 +168,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Maximum vagy minimum?";
             // 
-            // comboBox1
+            // comboBox_MinMax
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_MinMax.FormattingEnabled = true;
+            this.comboBox_MinMax.Items.AddRange(new object[] {
             "Minimum",
             "Maximum"});
-            this.comboBox1.Location = new System.Drawing.Point(20, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(335, 32);
-            this.comboBox1.TabIndex = 12;
+            this.comboBox_MinMax.Location = new System.Drawing.Point(20, 36);
+            this.comboBox_MinMax.Name = "comboBox_MinMax";
+            this.comboBox_MinMax.Size = new System.Drawing.Size(335, 32);
+            this.comboBox_MinMax.TabIndex = 12;
             // 
             // button_Maximum_Minimum_Valasztas
             // 
@@ -175,6 +188,7 @@
             this.button_Maximum_Minimum_Valasztas.TabIndex = 10;
             this.button_Maximum_Minimum_Valasztas.Text = "Minimum/Maximum választás";
             this.button_Maximum_Minimum_Valasztas.UseVisualStyleBackColor = false;
+            this.button_Maximum_Minimum_Valasztas.Click += new System.EventHandler(this.button_Maximum_Minimum_Valasztas_Click);
             // 
             // groupBox4
             // 
@@ -218,16 +232,6 @@
             this.button_Kereses.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button_Kereses.UseVisualStyleBackColor = false;
             // 
-            // button_Megszamolas
-            // 
-            this.button_Megszamolas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button_Megszamolas.Location = new System.Drawing.Point(20, 104);
-            this.button_Megszamolas.Name = "button_Megszamolas";
-            this.button_Megszamolas.Size = new System.Drawing.Size(335, 42);
-            this.button_Megszamolas.TabIndex = 6;
-            this.button_Megszamolas.Text = "Megszámolás";
-            this.button_Megszamolas.UseVisualStyleBackColor = false;
-            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -248,6 +252,7 @@
             this.button_Betoltes.TabIndex = 5;
             this.button_Betoltes.Text = "Betöltés";
             this.button_Betoltes.UseVisualStyleBackColor = true;
+            this.button_Betoltes.Click += new System.EventHandler(this.button_Betoltes_Click);
             // 
             // textBox_Forrasfajl
             // 
@@ -275,6 +280,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
             this.Text = "Példa Windows Form alkalmazás";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -299,7 +305,7 @@
         private System.Windows.Forms.TextBox textBox_EredmenyFajlNeve;
         private System.Windows.Forms.Button button_Kiiras;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_MinMax;
         private System.Windows.Forms.Button button_Maximum_Minimum_Valasztas;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBox_talalatok_jelolese;
