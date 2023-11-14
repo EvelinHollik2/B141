@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{080BD1BB-C9D8-44B7-B2BD-0634542F24AC}</ProjectGuid>
+    <ProjectGuid>{0B0FE99D-1A6E-4878-BC39-CCBDE0C1D616}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>schumacher</RootNamespace>
     <AssemblyName>schumacher</AssemblyName>
@@ -45,7 +45,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schum.cs" />
+    <Compile Include="Scumi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

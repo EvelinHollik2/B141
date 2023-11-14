@@ -1,0 +1,7 @@
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\bin\Debug\Sikidomok.exe.config
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\bin\Debug\Sikidomok.exe
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\bin\Debug\Sikidomok.pdb
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\obj\Debug\Sikidomok.csproj.AssemblyReference.cache
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\obj\Debug\Sikidomok.csproj.CoreCompileInputs.cache
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\obj\Debug\Sikidomok.exe
+C:\Users\hollik.evelin\Desktop\B141\2023_Bereg141\Sikidomok\obj\Debug\Sikidomok.pdb
