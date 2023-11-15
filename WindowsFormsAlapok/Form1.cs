@@ -20,7 +20,7 @@ namespace WindowsFormsAlapok
 
         private void button_Betoltes_Click(object sender, EventArgs e)
         {
-            Adatbetoltes();
+            Adatbetoltes(openFileDialog1.FileName);
         }
 
         private void button_TeruletekAtlaga_Click(object sender, EventArgs e)
@@ -50,11 +50,14 @@ namespace WindowsFormsAlapok
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox_MinMax.SelectedIndex = 0;
-            Adatbetoltes();
-
+            string kiindulasiFajl = Environment.CurrentDirectory + Path.DirectorySeparatorChar + "orszagok.csv";
+            if (File.Exists(kiindulasiFajl))
+            {
+                Adatbetoltes(kiindulasiFajl);
+            }
         }
 
-        private void Adatbetoltes()
+        private void Adatbetoltes(string file)
         {
             openFileDialog1.Filter = "vesszővel tagolt csv|*.csv|txt files (*.txt)|*.txt|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 0;
@@ -153,6 +156,16 @@ namespace WindowsFormsAlapok
                 }
                 MessageBox.Show($"Minimum {keresettOszag.OrszagNev} terület: {keresettOszag.Terulet}");
             }
+        }
+
+        private void szinvaltoztatas(object sender, EventArgs e)
+        {
+            textBox_KeresettOrszag.BackColor = Color.LightPink;
+        }
+
+        private void textBox_KeresettOrszag_MouseLeave(object sender, EventArgs e)
+        {
+            textBox_KeresettOrszag.BackColor = DefaultBackColor;
         }
     }
 }
