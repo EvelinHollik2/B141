@@ -1,0 +1,7 @@
+Számlát Kér, Fizetési mód: Készpénz
+Frutti di Mare ára: 1350 Ft 1db.
+Fizetendő összeg: 1350 Ft
+Számlát Nem kér, Fizetési mód: Bankkártya
+Frutti di Mare ára: 1350 Ft 1db.
+Vesuvio ára: 900 Ft 2db.
+Fizetendő összeg: 3600 Ft

@@ -26,7 +26,7 @@ namespace WindowsFormPizza
 
         public override string ToString()
         {
-            return $"{pizzanev} területe: {ar.ToString("#0 Ft")}";
+            return $"{pizzanev} ára: {ar.ToString("#0 Ft")}";
         }
     }
 }

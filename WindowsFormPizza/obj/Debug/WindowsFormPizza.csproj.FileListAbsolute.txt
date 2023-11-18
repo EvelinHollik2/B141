@@ -8,3 +8,14 @@ C:\Users\hollik.evelin\Desktop\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.
 C:\Users\hollik.evelin\Desktop\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.csproj.CoreCompileInputs.cache
 C:\Users\hollik.evelin\Desktop\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.exe
 C:\Users\hollik.evelin\Desktop\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.pdb
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\bin\Debug\pizza.csv
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\bin\Debug\WindowsFormPizza.exe.config
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\bin\Debug\WindowsFormPizza.exe
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\bin\Debug\WindowsFormPizza.pdb
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.csproj.AssemblyReference.cache
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.Form1.resources
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.Properties.Resources.resources
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.csproj.GenerateResource.cache
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.csproj.CoreCompileInputs.cache
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.exe
+C:\Users\Evelin\Desktop\suli\2.14-2\B141\WindowsFormPizza\obj\Debug\WindowsFormPizza.pdb
