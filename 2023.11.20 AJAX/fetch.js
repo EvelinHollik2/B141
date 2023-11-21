@@ -22,10 +22,10 @@ async function getAllUsers() {
 function showAllUsers(params) {
     params.forEach(user => {
         appendCard(user);
-    });    
+    });
 }
 
-function appendCard(user){
+function appendCard(user) {
 
 }
 
