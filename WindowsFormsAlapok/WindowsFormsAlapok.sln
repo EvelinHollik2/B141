@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
@@ -23,3 +24,30 @@ Global
 		SolutionGuid = {DA57AFF7-8BE3-4301-98B8-93B810BCA1C8}
 	EndGlobalSection
 EndGlobal
+=======
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAlapok", "WindowsFormsAlapok.csproj", "{3411510B-B20C-41BF-816B-158DC58E3CF6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3411510B-B20C-41BF-816B-158DC58E3CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3411510B-B20C-41BF-816B-158DC58E3CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3411510B-B20C-41BF-816B-158DC58E3CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3411510B-B20C-41BF-816B-158DC58E3CF6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DA57AFF7-8BE3-4301-98B8-93B810BCA1C8}
+	EndGlobalSection
+EndGlobal
+>>>>>>> 51da15f225cf15f9e335bd3f2ee5749c48e53b71
