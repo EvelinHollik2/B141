@@ -3,6 +3,7 @@ const inputUsernames = document.querySelector("#usernames");
 const inputDarab = document.querySelector("#darab");
 const buttonRead = document.querySelector("#read");
 const body = document.getElementsByTagName("body")[0];
+const cards = document.querySelector("#cards");
 
 body.addEventListener("load", getAllUsers); //-- a lap betöltésekor is..
 buttonRead.addEventListener("click", getAllUsers);
@@ -20,8 +21,14 @@ async function getAllUsers() {
 
 function showAllUsers(params) {
     params.forEach(user => {
-        card="<div class=\"card\" style=\"width: 18rem;\">"
-        +"<img src=\"noimage.jpg\" class=\"card-img-top\" alt=\"...\">"
-        +"<div class=\"card-body\"><h5 class=\"card-title\">Card title</h5>" + user.id + "</h5>";
+        appendCard(user);
     });    
 }
+
+function appendCard(user){
+
+}
+
+//card="<div class=\"card\" style=\"width: 18rem;\">"
+//+"<img src=\"noimage.jpg\" class=\"card-img-top\" alt=\"...\">"
+//+"<div class=\"card-body\"><h5 class=\"card-title\">Card title</h5>" + user.id + "</h5>";
