@@ -1,69 +1,84 @@
-const express = require('express');
-const app = express(); //-- http szervert tududnk vele indítani
+/*Terminál
+npm -y létrehozza a json csomagot
+npm install express telepíti a többi csomagot
+npm install mysql telepíti az adatbázis kapcsolathoz szügséges csomagokat
+npm install cors telepíti a liveszerver használatához szügséges csomagot
+A mappába létrehoztunk egy fájlt aminek a neve ".gitignore" ennek a tartalma /node_modules/
+node index.js  parancs indítja el a szervert
+Ctrl + C állítja le a szervert
+*/
+//Visual Studio Code-ba a Thunder Client extension-t hozzáadtuk (Ennek a használatában én se tudok segíteni) 
+//Index.js
+const express = require('express'); //express létrehozása
+const app = express(); //-- http szervert tudunk vele indítani
 
-//-- átirányítások kezelése miatt kell
-const cors = require('cors');
-app.use(cors());
+const bodyParser = require('body-parser'); //bodyParser létrehozása
 
-// JSON adatok fogadása miatt kell
-const bodyParser = require('body-parser');
-// parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
-// parse application/json
-app.use(bodyParser.json())
+const cors = require('corse');  //cors létrehozása
+app.use(cors);                  //cors használata
 
-const mysql = require('mysql');
-const db = mysql.createConnection(
-    {
-        host: 'localhost',
-        user: 'root',
-        password: '',
-        database: 'tagdij'
-    }
+app.use(bodyParser.urlencoded({ extended: false })); // bodyParser használata
+app.use(bodyParser.json()); // a bodyban mindig próbálja az adatokat json-é alakítani
+
+const mysql = require('mysql'); //mysql létrehozása
+const { throws } = require('assert');
+const database = mysql.createConnection({ //Database létrehozása
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'tagdij' //ezt az adatbázist használtuk órán
+}
 );
-db.connect((err) => {
-    if (err) throw err;
-    console.log('Connected!');
+database.connect((err) => { //Csatlakozás megpróbálása
+    if (err) throw err; //nem sikerült
+    console.log('Connected');//sikerült
 });
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
+app.get('/', (req, res) => { // http://localhost:3000 esetén
+    res.send("Csá öcsi"); // ezt írja ki
 });
 
-app.get('/bela', (req, res) => {
-    res.send('Ez Béla lapja');
-});
-app.get('/bela/:id', (req, res) => {
-    let id = req.params.id;
-    res.send(`Ez Béla lapja, id: ${id}`);
+app.get('/sanyi', (req, res) => { //  http://localhost:3000/sanyi esetén 
+    res.send("Sanyi öcsém");        // ezt írja ki
 });
 
-app.get('/bela/:id/:nev', (req, res) => {
-    let id = req.params.id;
-    let nev = req.params.nev;
-    res.send(`Ez Béla lapja, id: ${id}, nev: ${nev}`);
+app.get('/sanyi/:id', (req, res) => {       //http://localhost:3000/sanyi/"akármilyen id [pl 11]"
+    let id = req.params.id;                 // id request
+    let nev = req.params.nev;               // név request
+    res.send("Sanyi öcsém, id:" + id + `Név: ${nev}`);      //ezt írja ki
 });
 
-app.post('/bela', (req, res) => {
-    let id = req.body.id;
-    let name = req.body.name;
-    res.send(`Ez Béla lapja, id: ${id}, name: ${name}`);
+app.get('/sanyi/lakcim', (req, res) => {    //http://localhost:3000/sanyi/lakcim
+    res.send("Sanyi öcsém az Északisarkon lakik");   //ezt írja ki
 });
 
-app.get('/tagok', (req, res) => {
-    let sqlcommand = 'SELECT * FROM `ugyfel`';
-    db.query(sqlcommand, (err, rows) => {
-        if (err) throw err;
-        res.send(rows);
+//POST
+
+app.post('/sanyi', (req, res) => { //küldeni sanyinak adatokat
+    let id = req.body.id; //adat
+    let nev = req.body.nev; //adat
+    res.send(`Sanyi öcsém POST, id: ${id}, név: ${nev} `);  //kiírás      
+});
+
+//Adatbázis lekérdezése
+app.get('/tagok', (req, res) => {                   //http://localhost:3000/tagok
+    let sqlcommand = 'SELECT * FROM `ugyfel`';   //Lekérdezés parancs tárolás
+    database.query(sqlcommand, (err, rows) => {    //Meghívás lekérdezés
+        if (err) throw err;  //nem sikerült
+        res.send(rows); //Sikerült
     });
 });
-app.get('/tagok/:id', (req, res) => {
-    let sqlcommand = `SELECT * FROM ugyfel WHERE azon=${req.params.id}`;
-    db.query(sqlcommand, (err, rows) => {
-        if (err) throw err;
-        res.send(rows);
+
+app.get('/tagok/:id', (req, res) => {                                      //http://localhost:3000/tagok/[azon]
+    let sqlcommand = `SELECT * FROM ugyfel WHERE azon=${req.params.id}`;   //Lekérdezés azonosító szerint parancs tárolás
+    database.query(sqlcommand, (err, rows) => {                           //Meghívás lekérdezés
+        if (err) throw err;  //nem sikerült
+        res.send(rows); //Sikerült
     });
 });
+
+
 app.listen(3000, () => {
-    console.log('Server is running on port 3000');
+    console.log('A szerver fut a 3000-s porton'); //localhost:3000
 });
+// app.listen után nem szabad írni bajos lehet a futása
