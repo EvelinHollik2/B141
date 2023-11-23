@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 npm -v  //verzió check
 npm init //megcsinálja a package.json-t
 npm install -g npm@10.2.4 //verzió frissítés
@@ -8,12 +7,3 @@ npm i body-parser //body-parser letöltés
 npm i cors //cors letöltés
 
 npm i mysql //adatbázis letöltése
-=======
-node -v  //verzió check
-npm init 
-npm install -g npm@10.2.4 //verzió frissítés
-npm install express //expess letöltés
-node index.js //program indítás
-npm i body-parser //body-parser letöltés
-npm i cors //cors letöltés
->>>>>>> 51df27749176f9d6708bd0cbca341fe10c8af6e9

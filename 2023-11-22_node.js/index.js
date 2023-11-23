@@ -12,7 +12,7 @@ Ctrl + C állítja le a szervert
 //Index.js
 const express = require('express'); //express létrehozása
 const app = express(); //-- http szervert tudunk vele indítani
-
+const path = require('path');
 const bodyParser = require('body-parser'); //bodyParser létrehozása
 
 const cors = require('cors');  //cors létrehozása
@@ -77,6 +77,13 @@ app.get('/tagok/:id', (req, res) => {                                      //htt
         res.send(rows); //Sikerült
     });
 });
+
+
+app.get('/', (req, res) => {
+    const filePath = path.resolve(__dirname, './index.html');
+    res.sendFile(filePath);
+})
+
 
 
 app.listen(3000, () => {
