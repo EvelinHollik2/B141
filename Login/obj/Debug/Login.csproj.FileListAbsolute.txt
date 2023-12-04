@@ -41,3 +41,4 @@ C:\Users\hollik.evelin\Desktop\B141\Login\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\hollik.evelin\Desktop\B141\Login\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\hollik.evelin\Desktop\B141\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.csproj.CopyComplete
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_Termek.resources

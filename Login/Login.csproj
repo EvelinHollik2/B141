@@ -104,6 +104,12 @@
     <Compile Include="Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Termek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Termek.Designer.cs">
+      <DependentUpon>Form_Termek.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Vasarlas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     <Compile Include="Termek.cs" />
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Termek.resx">
+      <DependentUpon>Form_Termek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Vasarlas.resx">
       <DependentUpon>Form_Vasarlas.cs</DependentUpon>

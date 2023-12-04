@@ -113,5 +113,10 @@ namespace Login
             //numericUpDown_db.Value = 1;
         }
 
+        private void újToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Termek form_TermekUj = new Form_Termek("Új");
+            form_TermekUj.ShowDialog(); //összekapcsolja a termékek formmal. 
+        }
     }
 }

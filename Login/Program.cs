@@ -40,6 +40,7 @@ namespace Login
             Application.SetCompatibleTextRenderingDefault(false);
             form_Login = new Form_Login();
             form_Vasarlas = new Form_Vasarlas();
+            
             Application.Run(form_Login);
         }
     }
