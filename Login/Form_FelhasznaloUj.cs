@@ -11,24 +11,23 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Form_Termek : Form
+    public partial class Form_FelhasznaloUj : Form
     {
         string mod = null;
-        public Form_Termek(string mod) //paramérterezés 
+        public Form_FelhasznaloUj(string mod)
         {
             InitializeComponent();
             this.mod = mod;
         }
 
-        private void Form_Termek_Load(object sender, EventArgs e)
+        private void Form_FelhasznaloUj_Load(object sender, EventArgs e)
         {
             MessageBox.Show(this.mod);
-            
         }
 
-        private void button_hozzaad_Click(object sender, EventArgs e)
+        private void button_letrehozas_Click(object sender, EventArgs e)
         {
-            Program.command.CommandText = "INSERT INTO `termek`(`termekid`, `termeknev`, `ar`, `db`) VALUES('" + "" + "','" + textBox_hozzaad_nev.Text + "','" + numericUpDown_hozzaad_ar.Value + "','" + numericUpDown_hozzaad_db.Value + "')";
+            Program.command.CommandText = "INSERT INTO `vasarlo` (`nev`, `jelszo`) VALUES ( '?', '?');";
             try
             {
                 if (Program.connection.State != ConnectionState.Open)

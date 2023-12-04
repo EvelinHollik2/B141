@@ -118,5 +118,35 @@ namespace Login
             Form_Termek form_TermekUj = new Form_Termek("Új");
             form_TermekUj.ShowDialog(); //összekapcsolja a termékek formmal. 
         }
+
+        private void törlésToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TermekTorles form_TermekTorles = new Form_TermekTorles("Törlés");
+            form_TermekTorles.ShowDialog();
+        }
+
+        private void módosításToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_TermekModositas form_TermekModositas = new Form_TermekModositas("Módosítás");
+            form_TermekModositas.ShowDialog();
+        }
+
+        private void újToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_FelhasznaloUj form_FelhasznaloUj = new Form_FelhasznaloUj("Új felhasználó");
+            form_FelhasznaloUj.ShowDialog();
+        }
+
+        private void módosításToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_FelhasznaloModositas form_FelhasznaloModositas = new Form_FelhasznaloModositas("Felhasználó módosítása");
+            form_FelhasznaloModositas.ShowDialog();
+        }
+
+        private void törlésToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form_FelhasznaloTorles form_FelhasznaloTorles = new Form_FelhasznaloTorles("Felhasználó törlése");
+            form_FelhasznaloTorles.ShowDialog();
+        }
     }
 }

@@ -67,7 +67,6 @@
             this.textBox_hozzaad_nev.Name = "textBox_hozzaad_nev";
             this.textBox_hozzaad_nev.Size = new System.Drawing.Size(148, 26);
             this.textBox_hozzaad_nev.TabIndex = 2;
-            this.textBox_hozzaad_nev.TextChanged += new System.EventHandler(this.textBox_hozzaad_nev_TextChanged);
             // 
             // numericUpDown_hozzaad_db
             // 

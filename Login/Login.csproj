@@ -98,6 +98,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Felhasznalo.cs" />
+    <Compile Include="Form_FelhasznaloModositas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FelhasznaloModositas.Designer.cs">
+      <DependentUpon>Form_FelhasznaloModositas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FelhasznaloTorles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FelhasznaloTorles.Designer.cs">
+      <DependentUpon>Form_FelhasznaloTorles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_FelhasznaloUj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_FelhasznaloUj.Designer.cs">
+      <DependentUpon>Form_FelhasznaloUj.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +129,18 @@
     <Compile Include="Form_Termek.Designer.cs">
       <DependentUpon>Form_Termek.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TermekModositas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TermekModositas.Designer.cs">
+      <DependentUpon>Form_TermekModositas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_TermekTorles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TermekTorles.Designer.cs">
+      <DependentUpon>Form_TermekTorles.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Vasarlas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,11 +150,26 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Termek.cs" />
+    <EmbeddedResource Include="Form_FelhasznaloModositas.resx">
+      <DependentUpon>Form_FelhasznaloModositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FelhasznaloTorles.resx">
+      <DependentUpon>Form_FelhasznaloTorles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_FelhasznaloUj.resx">
+      <DependentUpon>Form_FelhasznaloUj.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Termek.resx">
       <DependentUpon>Form_Termek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TermekModositas.resx">
+      <DependentUpon>Form_TermekModositas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_TermekTorles.resx">
+      <DependentUpon>Form_TermekTorles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Vasarlas.resx">
       <DependentUpon>Form_Vasarlas.cs</DependentUpon>
