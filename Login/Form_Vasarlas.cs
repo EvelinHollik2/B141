@@ -25,7 +25,7 @@ namespace Login
             Betoltes();
         }
 
-        private void Betoltes()
+        public void Betoltes()
         {
             listBox_termek.Items.Clear();
             try

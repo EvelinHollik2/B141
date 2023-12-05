@@ -37,6 +37,7 @@ namespace Login
                 }
                 Program.command.ExecuteNonQuery();
                 MessageBox.Show("Sikeres rögzítés");
+                Program.form_Vasarlas.Betoltes();
             }
             catch (MySqlException ex)
             {

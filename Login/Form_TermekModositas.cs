@@ -18,11 +18,12 @@ namespace Login
         {
             InitializeComponent();
             this.mod = mod;
+
         }
 
         private void button_termekModositas_Click(object sender, EventArgs e)
         {
-            Program.command.CommandText = "UPDATE `termek` SET `termeknev`='[value-?]',`db`='[value-?]' WHERE 1";
+            Program.command.CommandText = "UPDATE `termek` SET `termeknev`=@termeknev,`db`=@db WHERE 1";
             try
             {
                 if (Program.connection.State != ConnectionState.Open)
@@ -31,6 +32,7 @@ namespace Login
                 }
                 Program.command.ExecuteNonQuery();
                 MessageBox.Show("Sikeres rögzítés");
+                Program.form_Vasarlas.Betoltes();
             }
             catch (MySqlException ex)
             {
@@ -42,39 +44,14 @@ namespace Login
         private void Form_TermekModositas_Load(object sender, EventArgs e)
         {
             MessageBox.Show(this.mod);
-            Betoltes();
-        }
-
-        private void Betoltes()
-        {
-            listBox_termek.Items.Clear();
-            try
-            {
-                if (Program.connection.State != ConnectionState.Open)
-                {
-                    Program.connection.Open();
-                }
-                Program.command.CommandText = "UPDATE `termek` SET `termeknev`='?',`ar`='?',`db`='?' WHERE 1;";
-                using (MySqlDataReader dr = Program.command.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        Termek beolvasottTermek = new Termek(dr.GetInt32("termekid"), dr.GetString("termeknev"), dr.GetInt32("ar"), dr.GetInt32("db"));
-                        listBox_termek.Items.Add(beolvasottTermek);
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message); //hibakód
-                Environment.Exit(0);
-            }
+            Program.form_Vasarlas.Betoltes();
         }
 
         private void listBox_termek_SelectedIndexChanged(object sender, EventArgs e)
         {
             Termek Rendeles = (Termek)listBox_termek.SelectedItem;
             textBox_termek.Text = Rendeles.Termeknev;
+            
         }
     }
 }

@@ -42,3 +42,8 @@ C:\Users\hollik.evelin\Desktop\B141\Login\bin\Debug\System.Runtime.CompilerServi
 C:\Users\hollik.evelin\Desktop\B141\Login\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.csproj.CopyComplete
 C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_Termek.resources
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_FelhasznaloModositas.resources
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_FelhasznaloTorles.resources
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_FelhasznaloUj.resources
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_TermekModositas.resources
+C:\Users\hollik.evelin\Desktop\B141\Login\obj\Debug\Login.Form_TermekTorles.resources
