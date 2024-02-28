@@ -1,0 +1,33 @@
+JSON :
+{ 
+	"nev":adat,
+	"magassag":123
+}
+
+JSON Array:
+[
+	{ 
+	"nev":adat,
+	"magassag":123
+	},
+	{ 
+	"nev":adat2,
+	"magassag":137
+	}
+]
+
+nested JSON:
+{
+	"valami":ertek
+	"tovabbi adatok":
+	[
+		{ 
+		"nev":adat,
+		"magassag":123
+		},
+		{ 
+		"nev":adat2,
+		"magassag":137
+		}
+	]
+}

@@ -11,29 +11,10 @@ namespace WindowsFormsApp_OrarendNyilvantartas
     {
         public static Form_Login form_Login = null;
         public static Form_Orarend form_Orarend = null;
-        public static MySqlConnection connection = null;
-        public static MySqlCommand command = null;
         public static int userId;
+        public static Database db = new Database();
         static void Main()
         {
-            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
-            builder.Server = "localhost";
-            builder.UserID = "root";
-            builder.Password = "";
-            builder.Database = "orarend";
-            builder.CharacterSet = "utf8";
-            connection = new MySqlConnection(builder.ConnectionString);
-            command = connection.CreateCommand();
-            try
-            {
-                connection.Open();
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-                Environment.Exit(0);
-            }
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             form_Login = new Form_Login();

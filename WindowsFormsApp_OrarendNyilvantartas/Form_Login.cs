@@ -20,30 +20,9 @@ namespace WindowsFormsApp_OrarendNyilvantartas
 
         private void button_bejelentkezes_Click(object sender, EventArgs e)
         {
-            Program.command.CommandText = "SELECT `jelszo`,`tanarid` FROM `tanarok` WHERE `tanarnev` = @nev;";
-            Program.command.Parameters.Clear();
-            Program.command.Parameters.AddWithValue("@nev", textBox_FelhasznaloNev.Text);
-            if (Program.connection.State != ConnectionState.Open)
+            if (Program.db.login(textBox_FelhasznaloNev.Text, textBox_jelszo.Text)>=0)
             {
-                Program.connection.Open();
-
-            }
-            MySqlDataReader reader = Program.command.ExecuteReader();
-            if (reader.Read())
-            {
-                string taroltJelszo = reader.GetString("jelszo");
-                Program.userId = reader.GetInt32("tanarid");
-                reader.Close();
-                if (taroltJelszo.Equals(textBox_jelszo.Text))
-                {
-                    reader.Close();
-                    Program.form_Orarend.Show();
-                    this.Hide();
-                }
-                else
-                {
-                    MessageBox.Show("NOT GOOD!");
-                }
+                Program.form_Orarend.Show();
             }
         }
     }

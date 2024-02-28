@@ -18,48 +18,68 @@ namespace WindowsFormsApp_OrarendNyilvantartas
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-            
-        }
-
-        //Program.command.CommandText = "SELECT `tantargy` FROM `orak` WHERE `hetnapja` = Hétfő;";
-
         private void Form_Orarend_Load(object sender, EventArgs e)
         {
-            Betoltes();
+            updateOrakLista();
         }
 
-        private void Betoltes()
+        private void updateOrakLista()
         {
             Hetfo.Items.Clear();
-            try
-            {
-                if (Program.connection.State != ConnectionState.Open)
-                {
-                    Program.connection.Open();
-                }
-                Program.command.CommandText = "SELECT `oraid`,`sorszam`,`tantargy` FROM `orak` WHERE `hetnapja` = \"hétfő\";";
-                using (MySqlDataReader dr = Program.command.ExecuteReader())
-                {
-                    while (dr.Read())
-                    {
-                        Orarend beolvasottTermek = new Orarend(dr.GetInt32("oraid"), dr.GetString("tantargy"), dr.GetInt32("sorszam"), dr.GetString("hetnapja"));
-                        Hetfo.Items.Add(beolvasottTermek);
-                    }
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message); //hibakód
-                Environment.Exit(0);
-            }
+            Hetfo.Items.AddRange(Program.db.getNapiOrarend("hétfő").ToArray());
+            Kedd.Items.Clear();
+            Kedd.Items.AddRange(Program.db.getNapiOrarend("kedd").ToArray());
+            Szerda.Items.Clear();
+            Szerda.Items.AddRange(Program.db.getNapiOrarend("szerda").ToArray());
+            Csutortok.Items.Clear();
+            Csutortok.Items.AddRange(Program.db.getNapiOrarend("csütörtök").ToArray());
+            Pentek.Items.Clear();
+            Pentek.Items.AddRange(Program.db.getNapiOrarend("péntek").ToArray());
         }
 
         private void Hetfo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Orarend Rendeles = (Orarend)Hetfo.SelectedItem;
-            Hetfo.Text = Rendeles.Tantargy;
+            if (Hetfo.SelectedIndex < 0)
+            {
+                return;
+            }
+            Orarend kivalasztottOra = (Orarend)Hetfo.SelectedItem;
+        }
+
+        private void Kedd_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Kedd.SelectedIndex < 0)
+            {
+                return;
+            }
+            Orarend kivalasztottOra = (Orarend)Kedd.SelectedItem;
+        }
+
+        private void Szerda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Szerda.SelectedIndex < 0)
+            {
+                return;
+            }
+            Orarend kivalasztottOra = (Orarend)Szerda.SelectedItem;
+        }
+
+        private void Csutortok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Csutortok.SelectedIndex < 0)
+            {
+                return;
+            }
+            Orarend kivalasztottOra = (Orarend)Csutortok.SelectedItem;
+        }
+
+        private void Pentek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Pentek.SelectedIndex < 0)
+            {
+                return;
+            }
+            Orarend kivalasztottOra = (Orarend)Pentek.SelectedItem;
         }
     }
 }
